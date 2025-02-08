@@ -1,5 +1,5 @@
 
-import { Clock, Fire, Users } from "lucide-react";
+import { Flame, Clock, Users } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -29,7 +29,7 @@ const MealCard = ({ title, description, calories, prepTime, servings, image }: M
       <CardContent>
         <div className="flex items-center justify-between mb-4 text-sm text-gray-600">
           <div className="flex items-center space-x-1">
-            <Fire className="w-4 h-4 text-terracotta-400" />
+            <Flame className="w-4 h-4 text-terracotta-400" />
             <span>{calories} kcal</span>
           </div>
           <div className="flex items-center space-x-1">
