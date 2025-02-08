@@ -1,5 +1,6 @@
 
 import { Flame, Clock, Users } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -13,6 +14,8 @@ interface MealCardProps {
 }
 
 const MealCard = ({ title, description, calories, prepTime, servings, image }: MealCardProps) => {
+  const navigate = useNavigate();
+
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg animate-fade-in">
       <div className="relative h-48 overflow-hidden">
@@ -41,7 +44,10 @@ const MealCard = ({ title, description, calories, prepTime, servings, image }: M
             <span>{servings} servings</span>
           </div>
         </div>
-        <Button className="w-full bg-sage-500 hover:bg-sage-600 text-white">
+        <Button 
+          className="w-full bg-sage-500 hover:bg-sage-600 text-white"
+          onClick={() => navigate(`/recipe/1`)}
+        >
           View Recipe
         </Button>
       </CardContent>
